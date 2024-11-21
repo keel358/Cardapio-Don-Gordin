@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Gordin | Cardápio</title>
+    <link rel="stylesheet" href="../Carrinho/style.css">
+    <link rel="stylesheet" href="../Cardapio/detalhes.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="shortcut icon" href="../images/favicon.ico" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo"><a href="./index/index.html">Don Gordin</a></div>
+            <ul class="menu">
+                <li><a href="./index/index.html" class="menu-btn">Home</a></li>
+                <li><a href="./index/index.html#about" class="menu-btn">Sobre</a></li>
+                <li><a href="./index/index.html#services" class="menu-btn">Serviços</a></li>
+                <li><a href="./index/index.html#time" class="menu-btn">Horários</a></li>
+                <li><a href="../Cardapio/index.html" class="menu-btn">Cardápio</a></li>
+                <li><a href="../Carrinho/index.html" class="menu-btn"><i class="fas fa-shopping-cart"></i> Carrinho</a>
+                </li>
+            </ul>
+            <div class="menu-cart">
+                <a href="../Carrinho/index.html"><i class="fas fa-shopping-cart"></i><span id="cont-cart"></span></a>
+            </div>
+        </div>
+    </nav>
+    <div class="splash">
+        <div class="text-splash">
+            <i class="far fa-check-circle fa-3x"></i><br>
+            <p>Item adicionado ao carrinho</p>
+        </div>
+    </div>
+    <section>
+        <div id="resultado"></div>
+        <section class="details-area">
+            <div class="options">
+                <!-- Guarnições -->
+                <div id="guarnicoes">
+                    <h3 for="guarnicoes">Guarnições</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="guarn1">
+                            <label for="guarn1">Feijão tropeiro</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarn2">
+                            <label for="guarn2">Feijão de caldo</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarn3">
+                            <label for="guarn3">Arroz branco</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarn4">
+                            <label for="guarn4">Arroz integral</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarn5">
+                            <label for="guarn5">Espaguete alho e óleo</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarn6">
+                            <label for="guarn6">Abóbora</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarn7">
+                            <label for="guarn7">Quiabo</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarn8">
+                            <label for="guarn8">Batata frita</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarn9">
+                            <label for="guarn9">Farofa de ovo c/cenoura</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarn10">
+                            <label for="guarn10">Purê de batata</label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Acompanhamentos -->
+                <div id="acompanhamentos">
+                    <h3 for="acompanhamentos">Acompanhamentos</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="acomp1">
+                            <label for="acomp1">Salpicão</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acomp2">
+                            <label for="acomp2">Maionese</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acomp3">
+                            <label for="acomp3">Repolho cremoso no abacaxi</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acomp4">
+                            <label for="acomp4">Beterraba</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acomp5">
+                            <label for="acomp5">Mix de cenoura</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acomp6">
+                            <label for="acomp6">Macarronese</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acomp7">
+                            <label for="acomp7">Brócolis c/tomate cereja</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acomp8">
+                            <label for="acomp8">Ovo Cozido</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acomp9">
+                            <label for="acomp9">Alface</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acomp10">
+                            <label for="acomp10">Tomate</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acomp11">
+                            <label for="acomp11">Vinagrete</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acomp12">
+                            <label for="acomp12">Batata Doce</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acomp13">
+                            <label for="acomp13">Couve refogado</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acomp14">
+                            <label for="acomp14">Palmito picado</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- carnes -->
+                <div id="carnes">
+                    <h3 for="carnes">Carnes</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="carn1">
+                            <label for="carn1">Churrasco</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="carn2">
+                            <label for="carn2">Isca de peixe a dorê</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="carn3">
+                            <label for="carn3">Escondidinho de frango</label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- teste -->
+                <!-- Guarnições Feijoada -->
+                <div id="guarn02" class="feijoada"> <!-- Oculto por padrão -->
+                    <h3 for="guarn02">Guarnições Feijoada</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="guarnF1">
+                            <label for="guarnF1">Feijoada</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarnF3">
+                            <label for="guarnF3">Arroz branco</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarnF4">
+                            <label for="guarnF4">Arroz integral</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarnF5">
+                            <label for="guarnF5">Espaguete alho e óleo</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarn6">
+                            <label for="guarn6">Abóbora</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarnF7">
+                            <label for="guarnF7">Quiabo</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarnF8">
+                            <label for="guarnF8">Batata frita</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarnF9">
+                            <label for="guarnF9">Farofa de ovo c/cenoura</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarnF10">
+                            <label for="guarnF10">Purê de batata</label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Acompanhamentos -->
+                <div id="acomp02" class="feijoada"> <!-- Oculto por padrão -->
+                    <h3 for="acomp02">Acompanhamentos Feijoada</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="acompF1">
+                            <label for="acompF1">Salpicão</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompF2">
+                            <label for="acompF2">Maionese</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompF3">
+                            <label for="acompF3">Repolho cremoso no abacaxi</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompF4">
+                            <label for="acompF4">Beterraba</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompF5">
+                            <label for="acompF5">Mix de cenoura</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompF6">
+                            <label for="acompF6">Macarronese</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompF7">
+                            <label for="acompF7">Brócolis c/tomate cereja</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompF8">
+                            <label for="acompF8">Ovo Cozido</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompF9">
+                            <label for="acompF9">Alface</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompF10">
+                            <label for="acompF10">Tomate</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompF11">
+                            <label for="acompF11">Vinagrete</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompF12">
+                            <label for="acompF12">Batata Doce</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompF13">
+                            <label for="acompF13">Couve refogado</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompF14">
+                            <label for="acompF14">Palmito picado</label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- carnes -->
+                <div id="carn02" class="feijoada"> <!-- Oculto por padrão -->
+                    <h3 for="carn02">Carnes Feijoada</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="carnF1">
+                            <label for="carnF1">Feijoada com Carne e linguiça</label>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- teste -->
+                <!-- Guarnições parmegiana -->
+                <div id="guarn03" class="parmegiana"> <!-- Oculto por padrão -->
+                    <h3 for="guarn03">Guarnições Parmegiana</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="guarnP3">
+                            <label for="guarnP3">Arroz branco</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarnP4">
+                            <label for="guarnP4">Arroz integral</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarnP5">
+                            <label for="guarnP5">Espaguete alho e óleo</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarnP6">
+                            <label for="guarnP6">Abóbora</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarnP7">
+                            <label for="guarnP7">Quiabo</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarnP8">
+                            <label for="guarnP8">Batata frita</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarnP9">
+                            <label for="guarnP9">Farofa de ovo c/cenoura</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="guarnP10">
+                            <label for="guarnP10">Purê de batata</label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Acompanhamentos -->
+                <div id="acomp03" class="parmegiana"> <!-- Oculto por padrão -->
+                    <h3 for="acomp03">Acompanhamentos Parmegiana</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="acompP1">
+                            <label for="acompP1">Salpicão</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompP2">
+                            <label for="acompP2">Maionese</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompP3">
+                            <label for="acompP3">Repolho cremoso no abacaxi</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompP4">
+                            <label for="acompP4">Beterraba</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompP5">
+                            <label for="acompP5">Mix de cenoura</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompP6">
+                            <label for="acompP6">Macarronese</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompP7">
+                            <label for="acompP7">Brócolis c/tomate cereja</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompP8">
+                            <label for="acompP8">Ovo Cozido</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompP9">
+                            <label for="acompP9">Alface</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompP10">
+                            <label for="acompP10">Tomate</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompP11">
+                            <label for="acompP11">Vinagrete</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompP12">
+                            <label for="acompP12">Batata Doce</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompP13">
+                            <label for="acompP13">Couve refogado</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="acompP14">
+                            <label for="acompP14">Palmito picado</label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- carnes -->
+                <div id="carn03" class="parmegiana"> <!-- Oculto por padrão -->
+                    <h3 for="carn03">Carnes Parmegiana</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="carnP1">
+                            <label for="carnP1">Parmegiana de Frango </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="carnP2">
+                            <label for="carnP2">Parmegiana de Carne </label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Bebidas H2O -->
+                <div id="H2O" class="hidden"> <!-- Oculto por padrão -->
+                    <h3 for="H2O">Opções de bebidas</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="H2O1">
+                            <label for="H2O1">H20 - Tradicional </label>
+                        </li>
+                    </ul>
+                    <li>
+                        <input type="checkbox" id="H2O2">
+                        <label for="H2O2">H20 - Limoneto </label>
+                    </li>
+                </div>
+                <!-- Bebidas Coca-Cola -->
+                <div id="coca" class="hidden"> <!-- Oculto por padrão -->
+                    <h3 for="coca">Opções de bebidas</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="coca1">
+                            <label for="coca1">Coca-Cola Tradicional</label>
+                        </li>
+                    </ul>
+                    <li>
+                        <input type="checkbox" id="coca2">
+                        <label for="coca2">oca-Cola Zero Açucar</label>
+                    </li>
+                </div>
+                <!-- Bebidas Agua-->
+                <div id="agua" class="hidden"> <!-- Oculto por padrão -->
+                    <h3 for="agua">Opções de bebidas</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="agua1">
+                            <label for="agua1">Agua Tradicional</label>
+                        </li>
+                    </ul>
+                    <li>
+                        <input type="checkbox" id="agua2">
+                        <label for="agua2">Agua com Gás</label>
+                    </li>
+                </div>
+            </div>
+            <!-- Bebidas Lata-->
+            <div id="lata" class="hidden"> <!-- Oculto por padrão -->
+                <h3 for="lata">Opções de bebidas</h3>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="lata1">
+                        <label for="lata1">Guarrana</label>
+                    </li>
+                </ul>
+                <li>
+                    <input type="checkbox" id="lata2">
+                    <label for="lata2">Sukita</label>
+                </li>
+            </div>
+            <!-- Bebidas litro-->
+            <div id="litro" class="hidden"> <!-- Oculto por padrão -->
+                <h3 for="litro">Opções de bebidas</h3>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="litro1">
+                        <label for="litro1">Pepsi</label>
+                    </li>
+                </ul>
+                <li>
+                    <input type="checkbox" id="litro2">
+                    <label for="litro2">Coca-cola</label>
+                </li>
+            </div>
+            <!-- Bebidas MINI-->
+            <div id="mini" class="hidden"> <!-- Oculto por padrão -->
+                <h3 for="mini">Opções de bebidas</h3>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="mini1">
+                        <label for="mini1">Pepsi</label>
+                    </li>
+                </ul>
+                <li>
+                    <input type="checkbox" id="mini2">
+                    <label for="mini2">Coca-cola</label>
+                </li>
+                </ul>
+                <li>
+                    <input type="checkbox" id="mini3">
+                    <label for="mini3">fanta laranja</label>
+                </li>
+            </div>
+
+        </div>
+            <div class="splash"></div>
+            <div id="error"></div>
+
+            <div class="btn">
+                <button id="adicionar">Adicionar ao Carrinho</button>
+            </div>
+        </section>
+
+    </section>
+
+
+
+    <script src="detalhes.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
